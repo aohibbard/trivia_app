@@ -1,10 +1,10 @@
-#CLI TRIVIA
+# CLI TRIVIA
 
 Thanks for your interest in this CLI trivia application supported with trivia from Tandem!
 
 To run the application in your command line, ensure that you have the correct gems installed by running `bundle install` from the root of the directory. To start the applicaiton, enter the command: `ruby bin/run`.
 
-##DEPENDENCIES
+## DEPENDENCIES
 This application was built using Ruby 2.6.3p62.
 
 The application also utilizes the gem 'rainbow.' 
