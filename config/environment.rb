@@ -1,8 +1,7 @@
-require 'open-uri'
 require 'pry'
-require 'nokogiri'
 require 'rainbow'
+require 'json'
+require 'set'
 
-require_relative '../lib/scraper.rb'
-require_relative '../lib/cli.rb'
-require_relative '../lib/film.rb'
+require_relative '../lib/menu.rb'
+require_relative '../lib/clue.rb'
