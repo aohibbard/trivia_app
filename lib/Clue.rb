@@ -3,10 +3,7 @@ class Clue
     attr_accessor :question, :answer, :wrong_answers, :all_answers
     @@all = []
 
-    def initialize(wrong_answers)
-        @question = question
-        @answer = answer
-        @wrong_answers = wrong_answers
+    def initialize()
         @@all << self
     end
     
