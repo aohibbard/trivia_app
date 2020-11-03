@@ -14,3 +14,7 @@ Other dependenices are Ruby's JSON module and Set class, which are configured in
 
 ## OTHER
 This application was written by Andrew Hibbard as part of an application to the Tandem Apprentice Engineer role.
+
+## TESTING
+(Added November 3, 2020)
+A shell of tests is available in the spec directory. Tests are written for RSpec, which is included in the gem bundle. Tests can be run with the command `rspec spec/` and then the name of the file.
