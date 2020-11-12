@@ -4,7 +4,7 @@ class Menu
     @@questions = []
 
     def run 
-        # initialize Clue class
+        # initialize Clue class with trivia JSON file
         Clue.get_trivia
         puts
         puts
@@ -23,7 +23,6 @@ class Menu
         if input == "quit"
             quit 
         elsif input == "start"
-            # Quiz.get_trivia
             puts
             start_game
         else 
@@ -34,11 +33,12 @@ class Menu
     end 
 
     def start_game
-        # rest all variables
+        # reset all variables
         @@counter = 0
         @@score = 0
 
-        # create an array of ten random numbers for indices of clue
+        # create an array of ten unique random numbers
+        # these will be indicies of clues in Clue.all array
         randoms = Set.new
         while randoms.size < 10 
             randoms.add(rand(0..19))
@@ -81,6 +81,7 @@ class Menu
 
     def check_answer(answer, idx)
         input = gets.chomp.downcase
+        # only check valid inputs
         if is_valid(input)
             input = input.to_i() - 1
             answer = answer.to_i()
@@ -95,6 +96,9 @@ class Menu
             end
             puts "Your current score is " + Rainbow("#{@@score}/10") 
             puts
+            
+            # determine if this is the final question
+            # could also be @@questions.empty?
             if @@counter >= 10
                 tally_score
             else 
